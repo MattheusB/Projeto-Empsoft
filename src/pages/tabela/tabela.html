@@ -9,10 +9,34 @@
   <ion-navbar>
     <ion-title>Tabela</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Quantidade por mês</ion-label>
+      <ion-input type = "number" [(ngModel)]="qntMes" name = "title"></ion-input>
+    </ion-item>
+   
+    <ion-item>
+      <ion-label color="primary">Horas por dia</ion-label>
+      <ion-input type = "number" [(ngModel)]="hrsDias" ></ion-input>
+    </ion-item>
+   
+    <ion-item>
+      <ion-label color="primary">Dias por semana</ion-label>
+      <ion-input type = "number" [(ngModel)]="diasSemana"></ion-input>
+    </ion-item>
+   
+    <ion-item>
+      <ion-label color="primary">Semanas por ano</ion-label>
+      <ion-input type = "number" [(ngModel)]="semanaAno"></ion-input>
+    </ion-item>
+  
+    <button ion-button round (click) = "calculoFreelancer()">Round Button</button>
+    
+    <ion-item>
+      <ion-label color="primary">Resultado</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
