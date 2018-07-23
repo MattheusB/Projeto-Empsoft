@@ -28,7 +28,17 @@ export class CarrinhoPage {
   ionViewWillEnter(){
     this.carrinho = this.getCarrinho();
   }
+
   getCarrinho(){
     return this.carrinho;
   }
+
+  getTotal(){
+    this.RetalhoService.getTotal();
+  }
+
+  removeItem(produto: Produto){
+    this.RetalhoService.delete(produto);
+  }
+
 }

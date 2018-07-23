@@ -42,7 +42,6 @@ export class HomePage {
   addCarrinho1() {
     this.RetalhoService.add(this.produto1);
   }
-
   addCarrinho2() {
     this.RetalhoService.add(this.produto2);
   }
