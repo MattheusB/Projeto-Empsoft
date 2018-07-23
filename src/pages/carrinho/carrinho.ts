@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Produto } from '../../models/produto';
+import { RetalhoProvider } from '../../providers/retalho/retalho';
 
 /**
  * Generated class for the CarrinhoPage page.
@@ -15,11 +17,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CarrinhoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public RetalhoService: RetalhoProvider) {
   }
+
+  public carrinho: Produto[] = this.RetalhoService.getEstoque();
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CarrinhoPage');
   }
-
+  ionViewWillEnter(){
+    this.carrinho = this.getCarrinho();
+  }
+  getCarrinho(){
+    return this.carrinho;
+  }
 }

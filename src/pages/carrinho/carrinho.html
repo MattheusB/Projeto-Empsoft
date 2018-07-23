@@ -14,5 +14,28 @@
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let produto of carrinho">
+      <div id="nome" item-start></div>
+        <ion-thumbnail item-left><img src="assets/imgs/retalho{{produto.codigo}}.jpeg"></ion-thumbnail>
+        <ion-label>
+          <ion-card>
+            <h2>{{produto.name}}</h2>
+            <div style="overflow: hidden;">
+                <p class="codigo">Codigo: #{{produto.codigo}}<br /></p>
+                <p class="valor">Valor: R$ {{produto.valor}}.00<br /></p>
+                <p class="peso">Peso: {{produto.peso}} kg</p>
+            </div>
+            <button ion-button small color="danger" icon-start>
+                <ion-icon name="trash"></ion-icon>
+            </button>
+          </ion-card>
 
+        </ion-label>
+    </ion-item>
+  </ion-list>
+      <button ion-button full color="blue" icon-start>
+        <ion-icon name='finalize'></ion-icon>
+        Finalizar compra
+      </button>
 </ion-content>

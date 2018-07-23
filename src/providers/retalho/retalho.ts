@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Produto } from '../../models/produto';
 
 /*
   Generated class for the RetalhoProvider provider.
@@ -10,8 +10,18 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class RetalhoProvider {
 
-  constructor(public http: HttpClient) {
+  private estoque: Produto[] = [];
+
+  constructor() {
     console.log('Hello RetalhoProvider Provider');
   }
 
+  public add(produto: Produto){
+    this.estoque.push(produto);
+    console.log(this.estoque);
+  }
+
+  getEstoque(){
+    return this.estoque;
+  }
 }

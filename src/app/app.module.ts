@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { HomePage } from '../pages/home/home';
+import { HomePageModule } from '../pages/home/home.module';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -25,12 +25,12 @@ import { Retalho10PageModule } from '../pages/retalho10/retalho10.module';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    TabsPage
+    TabsPage,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HomePageModule,
     CarrinhoPageModule,
     TabelaPageModule,
     Retalho1PageModule,
@@ -42,12 +42,12 @@ import { Retalho10PageModule } from '../pages/retalho10/retalho10.module';
     Retalho7PageModule,
     Retalho8PageModule,
     Retalho9PageModule,
-    Retalho10PageModule
+    Retalho10PageModule,
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     TabsPage
   ],
   providers: [
