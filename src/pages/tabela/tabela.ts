@@ -35,20 +35,19 @@ export class TabelaPage {
    * @param diasSemana  quantos dias quer trabalhar na semana
    * @param semanaAno  quantas semanas quer trabalhar por ano
    */
-  calculoFreelancer():number{
+  calculoFreelancer(){
     let valorHoraFinal: number;
-    let valorProjetoFinal:number;
 
     if(this.hrsDias == null || this.qntMes == null || this.diasSemana == null || this.semanaAno == null){
-      alert("Por favor, preencha todos os dados")
+      return 0;
     }else{
       let horasPorSemana = this.hrsDias * this.diasSemana;
       let horasPorAnoDeFolga = horasPorSemana * this.semanaAno;
       valorHoraFinal = this.qntMes * 12 / (52.1 * horasPorSemana - horasPorAnoDeFolga);
 
       
-      alert("O seu novo valor por hora é: R$" + valorHoraFinal.toFixed(2) + "/hora");
-      return valorHoraFinal;
+      //alert("O seu novo valor por hora é: R$" + valorHoraFinal.toFixed(2) + "/hora");
+      return valorHoraFinal.toFixed(2);
     }
   }
 }

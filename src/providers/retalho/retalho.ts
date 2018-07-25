@@ -30,6 +30,7 @@ export class RetalhoProvider {
     if (index > -1) {
       this.estoque.splice(index, 1);
     }
+    console.log(this.estoque);
   }
 
   private adicionaValor(valor: number){
@@ -41,10 +42,19 @@ export class RetalhoProvider {
   }
 
   public getTotal(){
-    return this.total;
+    return this.total.toFixed(2);
   }
 
   public getEstoque(){
     return this.estoque;
   }
+
+  public zeraEstoque(){
+    while (this.estoque.length > 0) {
+      this.estoque.pop();
+    }
+    this.total = 0;
+    console.log(this.estoque);
+  }
+
 }

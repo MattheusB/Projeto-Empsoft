@@ -15,7 +15,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let produto of carrinho">
+    <ion-item padding *ngFor="let produto of carrinho">
       <div id="nome" item-start></div>
         <ion-thumbnail item-left><img src="assets/imgs/retalho{{produto.codigo}}.jpeg"></ion-thumbnail>
         <ion-label>
@@ -26,19 +26,17 @@
                 <p class="valor">Valor: R$ {{produto.valor}}.00<br /></p>
                 <p class="peso">Peso: {{produto.peso}} kg</p>
             </div>
-            <button ion-button small color="danger" icon-start (click)="removeItem(produto)">
+            <div class="center">
+              <button ion-button small color="danger" icon-start (click)="removeItem(produto)">
                 <ion-icon name="trash"></ion-icon>
-            </button>
+              </button>
+            </div>
           </ion-card>
-
         </ion-label>
     </ion-item>
   </ion-list>
-      <ion-card>
-        <h2>Valor total da compra: getTotal()</h2>
-      </ion-card>
-      <button ion-button full color="blue" icon-start>
-        <ion-icon name='finalize'></ion-icon>
-        Finalizar compra
-      </button>
+      <ion-item>
+        <ion-label color="secondary" text-center>Valor total da compra: R$ {{getTotalCompra()}}</ion-label>
+      </ion-item>
+        <button ion-button full color="danger" icon-start (click)="finalizaCompra()">Finalizar compra</button>
 </ion-content>

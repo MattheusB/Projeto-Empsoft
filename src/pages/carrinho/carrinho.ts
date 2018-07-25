@@ -33,8 +33,12 @@ export class CarrinhoPage {
     return this.carrinho;
   }
 
-  getTotal(){
-    this.RetalhoService.getTotal();
+  getTotalCompra(){
+    return this.RetalhoService.getTotal();
+  }
+
+  finalizaCompra(){
+    this.RetalhoService.zeraEstoque();
   }
 
   removeItem(produto: Produto){
