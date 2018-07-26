@@ -42,6 +42,9 @@ export class RetalhoProvider {
   }
 
   public getTotal(){
+    if(this.total == 0){
+      return 0;
+    }
     return this.total.toFixed(2);
   }
 

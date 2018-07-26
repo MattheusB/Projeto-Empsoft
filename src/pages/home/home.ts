@@ -10,7 +10,6 @@ import { Retalho7Page } from '../retalho7/retalho7';
 import { Retalho6Page } from '../retalho6/retalho6';
 import { Retalho5Page } from '../retalho5/retalho5';
 import { Retalho4Page } from '../retalho4/retalho4';
-import { Produto } from '../../models/produto';
 import { RetalhoProvider } from '../../providers/retalho/retalho';
 
 
