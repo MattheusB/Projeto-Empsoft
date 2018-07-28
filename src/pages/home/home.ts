@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Retalho1Page } from '../retalho1/retalho1';
 import { Retalho2Page } from '../retalho2/retalho2';
 import { Retalho3Page } from '../retalho3/retalho3';
@@ -31,7 +31,7 @@ export class HomePage {
   private produto9 =  {name: "Whitney Houston", valor: 75, codigo: 9, quantidade: 1, peso: 2}
   private produto10 =  {name: "Back Street Boys", valor: 60, codigo: 10, quantidade: 1, peso: 35}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public RetalhoService: RetalhoProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public RetalhoService: RetalhoProvider, public toastCtrl: ToastController) {
   }
   
   ionViewDidLoad() {
@@ -40,41 +40,51 @@ export class HomePage {
   
   addCarrinho1() {
     this.RetalhoService.add(this.produto1);
+    this.abrirToast("Produto adicionado ao carrinho.");
   }
   addCarrinho2() {
     this.RetalhoService.add(this.produto2);
+    this.abrirToast("Produto adicionado ao carrinho.");
   }
 
   addCarrinho3() {
     this.RetalhoService.add(this.produto3);
+    this.abrirToast("Produto adicionado ao carrinho.");
   }
 
   addCarrinho4() {
     this.RetalhoService.add(this.produto4);
+    this.abrirToast("Produto adicionado ao carrinho.");
   }
 
   addCarrinho5() {
     this.RetalhoService.add(this.produto5);
+    this.abrirToast("Produto adicionado ao carrinho.");
   }
 
   addCarrinho6() {
     this.RetalhoService.add(this.produto6);
+    this.abrirToast("Produto adicionado ao carrinho.");
   }
 
   addCarrinho7() {
     this.RetalhoService.add(this.produto7);
+    this.abrirToast("Produto adicionado ao carrinho.");
   }
 
   addCarrinho8() {
     this.RetalhoService.add(this.produto8);
+    this.abrirToast("Produto adicionado ao carrinho.");
   }
 
   addCarrinho9() {
     this.RetalhoService.add(this.produto9);
+    this.abrirToast("Produto adicionado ao carrinho.");
   }
 
   addCarrinho10() {
     this.RetalhoService.add(this.produto10);
+    this.abrirToast("Produto adicionado ao carrinho.");
   }
 
   goToRetalho1(){
@@ -115,6 +125,15 @@ export class HomePage {
 
   goToRetalho10(){
     this.navCtrl.push(Retalho10Page);
+  }
+
+  private abrirToast(text) {
+    let toast = this.toastCtrl.create({
+      message: text,
+      duration: 2000,
+      position: 'bottom'
+    });
+    toast.present();
   }
 
 }
