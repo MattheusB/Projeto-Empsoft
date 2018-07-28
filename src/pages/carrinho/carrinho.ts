@@ -38,7 +38,7 @@ export class CarrinhoPage {
   }
 
   finalizaCompra(){
-    this.RetalhoService.zeraEstoque();
+    this.RetalhoService.zeraCarrinho();
   }
 
   removeItem(produto: Produto){

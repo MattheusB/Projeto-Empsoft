@@ -19,17 +19,31 @@ export class RetalhoProvider {
   }
 
   public add(produto: Produto){
-    this.adicionaValor(produto.valor);
-    this.estoque.push(produto);
+    var index = this.estoque.indexOf(produto);
+    
+    if (index == -1) {
+      this.estoque.push(produto);
+      this.adicionaValor(produto.valor);
+    } else {
+      this.estoque[index].quantidade += 1;
+      this.adicionaValor(produto.valor);
+    }
+
     console.log(this.estoque);
   }
 
   public delete(produto: Produto){
-    this.removeValor(produto.valor);
+    
     var index = this.estoque.indexOf(produto);
-    if (index > -1) {
+
+    if (index > -1 && this.estoque[index].quantidade == 1) {
       this.estoque.splice(index, 1);
+      this.removeValor(produto.valor);
+    } else if (index > -1 && this.estoque[index].quantidade > 0) {
+      this.estoque[index].quantidade -= 1;
+      this.removeValor(produto.valor);
     }
+
     console.log(this.estoque);
   }
 
@@ -52,7 +66,7 @@ export class RetalhoProvider {
     return this.estoque;
   }
 
-  public zeraEstoque(){
+  public zeraCarrinho(){
     while (this.estoque.length > 0) {
       this.estoque.pop();
     }
