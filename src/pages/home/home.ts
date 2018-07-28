@@ -26,7 +26,7 @@ export class HomePage {
   private produto4 =  {name: "Run-D.M.C.", valor: 10, codigo: 4, quantidade: 1, peso: 10}
   private produto5 =  {name: "Justin Timberlake", valor: 100, codigo: 5, quantidade: 1, peso: 5}
   private produto6 =  {name: "Lana Del Rey", valor: 40, codigo: 6, quantidade: 1, peso: 15}
-  private produto7 =  {name: "Florence and the Machine", valor: 15, codigo: 7, quantidade: 1, peso: 25}
+  private produto7 =  {name: "Drake", valor: 15, codigo: 7, quantidade: 1, peso: 25}
   private produto8 =  {name: "Michael Jackson", valor: 200, codigo: 8, quantidade: 1, peso: 1}
   private produto9 =  {name: "Whitney Houston", valor: 75, codigo: 9, quantidade: 1, peso: 2}
   private produto10 =  {name: "Back Street Boys", valor: 60, codigo: 10, quantidade: 1, peso: 35}
