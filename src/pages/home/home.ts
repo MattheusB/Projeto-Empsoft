@@ -20,16 +20,16 @@ import { RetalhoProvider } from '../../providers/retalho/retalho';
 })
 export class HomePage {
   
-  private produto1 =  {name: "Nine Inch Nails Live", valor: 25, codigo: 1, quantidade: 1, peso: 30}
-  private produto2 =  {name: "Erykah Badu", valor: 15, codigo: 2, quantidade: 1, peso: 20}
-  private produto3 =  {name: "Queen", valor: 30, codigo: 3, quantidade: 1, peso: 15}
-  private produto4 =  {name: "Run-D.M.C.", valor: 10, codigo: 4, quantidade: 1, peso: 10}
-  private produto5 =  {name: "Justin Timberlake", valor: 100, codigo: 5, quantidade: 1, peso: 5}
-  private produto6 =  {name: "Lana Del Rey", valor: 40, codigo: 6, quantidade: 1, peso: 15}
-  private produto7 =  {name: "Drake", valor: 15, codigo: 7, quantidade: 1, peso: 25}
-  private produto8 =  {name: "Michael Jackson", valor: 200, codigo: 8, quantidade: 1, peso: 1}
-  private produto9 =  {name: "Whitney Houston", valor: 75, codigo: 9, quantidade: 1, peso: 2}
-  private produto10 =  {name: "Back Street Boys", valor: 60, codigo: 10, quantidade: 1, peso: 35}
+  private produto1 =  {name: "Retalhos lisos quadrados", valor: 25, codigo: 1, quantidade: 1, peso: 30}
+  private produto2 =  {name: "Retalhos quadrados com detalhes", valor: 15, codigo: 2, quantidade: 1, peso: 20}
+  private produto3 =  {name: "Retalhos grandes e retangulares", valor: 30, codigo: 3, quantidade: 1, peso: 15}
+  private produto4 =  {name: "Retalhos de couro (pequeno)", valor: 10, codigo: 4, quantidade: 1, peso: 10}
+  private produto5 =  {name: "Retalhos de couro marrons", valor: 100, codigo: 5, quantidade: 1, peso: 5}
+  private produto6 =  {name: "Retalhos de couro (medio)", valor: 40, codigo: 6, quantidade: 1, peso: 15}
+  private produto7 =  {name: "Retalhos de couro (grande)", valor: 15, codigo: 7, quantidade: 1, peso: 25}
+  private produto8 =  {name: "Retalhos de PVC", valor: 200, codigo: 8, quantidade: 1, peso: 1}
+  private produto9 =  {name: "Retalhos de couro (extra - grande)", valor: 75, codigo: 9, quantidade: 1, peso: 2}
+  private produto10 =  {name: "Retalhos de couro com detalhes", valor: 60, codigo: 10, quantidade: 1, peso: 35}
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public RetalhoService: RetalhoProvider, public toastCtrl: ToastController) {
   }
