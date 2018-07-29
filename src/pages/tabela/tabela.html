@@ -1,9 +1,3 @@
-<!--
-  Generated template for the TabelaPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar color="skin_button">
@@ -15,24 +9,24 @@
   <ion-list>
     <ion-item>
       <ion-label color="red_button">Quantidade por mês</ion-label>
-      <ion-input type="number" [(ngModel)]="qntMes" name = "title"></ion-input>
+      <ion-input type="number" [(ngModel)]="qntMes" name="title"></ion-input>
     </ion-item>
-   
+
     <ion-item>
       <ion-label color="red_button">Horas por dia</ion-label>
-      <ion-input type="number" [(ngModel)]="hrsDias" ></ion-input>
+      <ion-input type="number" [(ngModel)]="hrsDias"></ion-input>
     </ion-item>
-   
+
     <ion-item>
       <ion-label color="red_button">Dias por semana</ion-label>
       <ion-input type="number" [(ngModel)]="diasSemana"></ion-input>
     </ion-item>
-   
+
     <ion-item>
       <ion-label color="red_button">Semanas por ano</ion-label>
       <ion-input type="number" [(ngModel)]="semanaAno"></ion-input>
     </ion-item>
-    
+
     <ion-item>
       <ion-label color="dark" text-center>Resultado: R$ {{calculoFreelancer()}}/hora</ion-label>
     </ion-item>

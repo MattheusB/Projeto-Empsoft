@@ -6,32 +6,21 @@
 
 </ion-header>
 
-
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let produto of carrinho">
-      <div id="nome" item-start></div>
-        <ion-thumbnail item-left><img src="assets/imgs/retalho{{produto.codigo}}.jpeg"></ion-thumbnail>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <h2>{{produto.name}}</h2>
-              <div style="overflow: hidden;">
-                  <p class="codigo">Codigo: #{{produto.codigo}}<br /></p>
-                  <p class="valor">Valor: R$ {{produto.valor}}.00<br /></p>
-                  <p class="quantidade">Quantidade: {{produto.quantidade}}<br /></p>
-                  <p class="peso">Peso: {{produto.peso}} kg</p>
-              </div>
-            </ion-col>
-            <ion-col>
-              <ion-buttons end>
-                  <button ion-button small color="red_button" (click)="removeItem(produto)">
-                      <ion-icon name="trash"></ion-icon>
-                  </button>
-              </ion-buttons>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
+      <ion-thumbnail item-start><img src="assets/imgs/retalho{{produto.codigo}}.jpeg"></ion-thumbnail>
+      
+      <h2>{{produto.name}}</h2>
+      
+      <p class="codigo">Codigo: #{{produto.codigo}}<br /></p>
+      <p class="valor">Valor: R$ {{produto.valor}}.00<br /></p>
+      <p class="quantidade">Quantidade: {{produto.quantidade}}<br /></p>
+      <p class="peso">Peso: {{produto.peso}} Kg</p>
+      
+      <button ion-button large clear item-end (click)="removeItem(produto)">
+          <ion-icon name="trash" color="red_button"></ion-icon>
+      </button>
     </ion-item>
   </ion-list>
       <ion-item>

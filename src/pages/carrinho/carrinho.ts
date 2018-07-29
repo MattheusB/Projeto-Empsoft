@@ -28,7 +28,7 @@ export class CarrinhoPage {
   ionViewWillEnter(){
     this.carrinho = this.getCarrinho();
   }
-
+  
   getCarrinho(){
     return this.carrinho;
   }

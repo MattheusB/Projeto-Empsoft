@@ -71,6 +71,7 @@ export class RetalhoProvider {
       this.estoque.pop();
     }
     this.total = 0;
+    
     console.log(this.estoque);
   }
 
